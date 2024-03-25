@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="searchicon.png" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SearchArea</title>
+	<script>
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location.replace("#");
+  }
+</script>
+<style>
+body {
+   height: 500px;
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: left;
+}
+</style>
+
+<style>
+    .footer-clean {
+  padding:50px 0;
+  background-color:#fff;
+  color:#4b4c4d;
+}
+
+.footer-clean h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+}
+
+.footer-clean .item.social {
+  text-align:right;
+}
+
+@media (max-width:767px) {
+  .footer-clean .item {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align:center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  margin-top:22px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity:0.9;
+}
+
+@media (max-width:991px) {
+  .footer-clean .item.social > a {
+    margin-top:40px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-clean .item.social > a {
+    margin-top:10px;
+  }
+}
+
+.footer-clean .copyright {
+  margin-top:14px;
+  margin-bottom:0;
+  font-size:13px;
+  opacity:0.6;
+}
+
+</style>
+<style>
+	input[type="search" i] {
+    appearance: auto;
+    box-sizing: border-box;
+    padding: 1px 2px;
+}
+</style>
+	<style>
+		.logo-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo-container img {
+  width: auto; /* Ajustez la largeur selon vos besoins */
+  height: auto; /* Ajustez la hauteur selon vos besoins */
+}
+
+.search-bar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; /* Ajustez la marge selon vos besoins */
+}
+
+.search-bar input[type="search"] {
+  width: 600px; /* Ajustez la largeur selon vos besoins */
+  height: 40px; /* Ajustez la hauteur selon vos besoins */
+  border-radius: 15px; /* Ajustez le rayon selon vos besoins */
+}
+
+	</style>
+</head>
+<body>
+<div class="logo-container">
+  <img src="logosearchengine.png" alt="Logo">
+</div>
+<script>
+      function predictSearch() {
+        // Récupérer la valeur saisie par l'utilisateur
+        let input = document.getElementById("search").value;
+
+        // Prédire la recherche en fonction de la valeur saisie
+        let prediction = "Résultats pour : " + input.toUpperCase();
+
+        // Afficher la prédiction de recherche
+        document.getElementById("search-prediction").innerHTML = prediction;
+      }
+    </script>
+<div class="search-bar">
+  <input type="search" placeholder="Effectuez une Recherche..." value="" id="search" onkeyup="predictSearch()" onchange="openPage()">
+        <!-- inclusion du fichier JavaScript externe -->
+<script type="text/javascript" src="script.js"></script>
+</div>
+<nav>
+	<h2>
+<a href="chat.html" style="text-decoration: none;" class="spaced-link">Recherche</a>
+<a href="chatimages.html" style="text-decoration: none;" class="spaced-link">Images</a>
+<a href="chatvidéos.html" style="text-decoration: none;" class="spaced-link">Vidéos</a>
+<a href="chatmaps.html" style="text-decoration: none;" class="spaced-link">Maps</a>
+<a href="chatbdd.html" style="text-decoration: none;" class="spaced-link">Données de la recherche</a>
+<a href="index.html" style="text-decoration: none;" class="spaced-link">Revenir à SearchArea</a>
+</h2>
+</nav>
+<style>
+	.spaced-link {
+  margin-right: 10px; /* Ajustez la marge à droite selon vos besoins */
+}
+
+	</style>
+</body>
+<br>
+<center>
+  <h2>Aucunne données cartographiques disponible !</h2>
+  <p>Nous sommes désolés, Attendez l'index maps !</p>
+</center>
+
+<br>
+<footer>
+<span>© 2023-2024, PoloOhYeah and Driss / <a href="https://twitter.com/PoloOhYeah/">Mon Twitter</a></span>
+ / <a href="eula.html">Conditions d'utilisations</a> / <a href="about.html">A propos</a>. / <a href="contact/index.php">Contact</a> / <a href="indexetat.html">Etat des Serveurs</a> / <a href="credit.html">Credit</a></div>
+</footer>
+
+
+
+
+
+<!-- CREDIT DU SITE SEARCH AREA -->
+<!--
+
+Damire pour l'orthographe (eula.html) et les mots clés de la recherche web.
+Driss pour la recherche web, les vidéos et les film.
+PoloOhYeah et Driss pour le nom du site.
+PoloOhYeah pour la base de données du site en MySQL via Adminer.
+PoloOhYeah pour le style du site.
+Validé par Driss !
+Serveur NGINX via Debian 11 et DELL Optiplex.
+PoloOhYeah pour la Maps
+
+------------------
+
+Site crée sous le nom de "PoloSearchEngine" en Juin 2022 à Boullogne-Billancourt et Vanves.
+renommé en SearchArea en Novembre 2022.
+
+------------------
+
+Page principale : +527 Lignes de code
+Script : +2846 Lignes de code 
+PHP : +250 Lignes de code
+SQL : +60 Lignes de code
+CSS de PoloOhYeah, Twitter, Google et CloudFlare
+
+------------------
+
+Premiere version sur MacBook Pro M1 !
+Nombre de collaborateur : 4
+
+
+-->
+
+
+
+
+
+
+
+
+</html>
